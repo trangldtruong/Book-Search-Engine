@@ -5,8 +5,8 @@ const typeDefs = `
   }
 
   type Mutation {
-    login
-    addUser
+    login: Auth
+    addUser: Auth
     saveBook
     removeBook
   }
@@ -16,7 +16,7 @@ const typeDefs = `
     username
     email
     bookCount
-    saveBooks
+    saveBooks: [Book]
 
   type Book {
     bookId
@@ -29,7 +29,7 @@ const typeDefs = `
 
   type Auth {
     token
-    user
+    user: User
   }
   }
 `;
